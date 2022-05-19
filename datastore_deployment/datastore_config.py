@@ -1,9 +1,5 @@
 import os
 
-# Current situation:
-# Every env holds connections to storages in its own environment
-# plus one hardcoded connection to ACC ADLS and ACC SQL for conveyor images and labels
-
 ENV = os.environ["DTAP_ENVIRONMENT"]
 DATASTORE_TYPES = ["BLOB", "ADLS2", "SQL"]
 DATASET_TYPES = ["file", "tabular"]
