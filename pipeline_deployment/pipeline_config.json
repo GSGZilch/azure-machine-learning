@@ -1,0 +1,44 @@
+{
+    "SOURCE_DIR_PREFIX": "",
+
+    "WORKSPACE_AUTH": "interactive",
+    
+    "ENV_NAME": "cur_env",
+
+    "EXPERIMENT_NAME": "demo-experiment",
+    
+    "CURATED_ENV": "AzureML-sklearn-1.0-ubuntu20.04-py38-cpu",
+    
+    "CPU_CLUSTERS": {
+        "cpu-cluster001": {
+            "min": 1,
+            "max": 1
+        }
+    },
+
+    "GPU_CLUSTERS": {},
+
+    "PIPELINE_NAME": "demo-ml-pipeline",
+    "PIPELINE_DESCRIPTION": "demo training pipeline for random forest model.",
+
+    "PIPELINE_STEPS": [
+        {
+            "NAME": "train",
+        
+            "SCRIPT": "train.py",
+           
+            "SOURCE_DIR": "Users\\omertens\\Documents\\repo\\azure-ml\\pipeline_step_dir",
+            
+            "RUN_WITH_PREVIOUS": false,
+            "COMPUTE": "cpu-cluster001",
+            "PARAMS": {
+                "input_dataset": "taxi_trip_csv"
+            },
+            "INPUT_DATASETS": {}
+        }
+    ],
+    "DEPLOY_PIPELINE_ENDPOINT": false,
+    "RUN_INSTANTLY": true, 
+    "ENDPOINT_NAME": "demo-pipeline-endpoint", 
+    "ENDPOINT_DESCRIPTION": "demo endpoint for random forest training pipeline"
+}
