@@ -1,8 +1,6 @@
 import os
 
 ENV = os.environ["DTAP_ENVIRONMENT"]
-DATASTORE_TYPES = ["BLOB", "ADLS2", "SQL"]
-DATASET_TYPES = ["file", "tabular"]
 
 DATASTORE_CONFIG = [
     {

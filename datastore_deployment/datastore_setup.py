@@ -33,6 +33,9 @@ def main():
     # Keyvault linked to AzureML Workspace
     kv = ws.get_default_keyvault()
     
+    DATASTORE_TYPES = ["BLOB", "ADLS2", "SQL"]
+    DATASET_TYPES = ["file", "tabular"]
+
     # datastore assertions
     for datastore_dict in DATASTORE_CONFIG:
         # assert that datastore types are filled in correctly
