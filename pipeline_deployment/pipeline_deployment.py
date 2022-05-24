@@ -149,7 +149,7 @@ def main(CONFIG):
                     
     for compute_config in compute_configs.values():
         for compute_name in compute_config:
-            compute_targets[compute_name].wait_for_completion(show_output=False, min_node_count=None, timeout_in_minutes=60)
+            compute_targets[compute_name].wait_for_completion(show_output=False, min_node_count=None, timeout_in_minutes=180)
             print(f"[{datetime.now()}] Compute target ready: {compute_name}")
 
     print(f"[{datetime.now()}] Finished compute target setup.")
